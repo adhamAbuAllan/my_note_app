@@ -12,7 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark(useMaterial3: true),
+      theme: ThemeData(
+        fontFamily: 'Poppins',
+        brightness: Brightness.dark,
+      ),
+
       // theme: ThemeData(
       //   brightness: Brightness.dark,
       //   scaffoldBackgroundColor: Colors.white30
@@ -27,6 +31,6 @@ class NotesApp extends StatelessWidget {
   const NotesApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: const NotesView(),);
+    return const Scaffold(body: NotesView(),);
   }
 }
